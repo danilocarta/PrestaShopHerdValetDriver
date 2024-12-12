@@ -1,25 +1,30 @@
-# Driver per Herd Laravel e Framework PrestaShop
+# Driver for Herd Laravel and PrestaShop Framework
+If you are a PrestaShop and Laravel/Symfony developer using the Herd Laravel development environment, you'll know that without Apache, the .htaccess file directives are often ignored by NGINX. The solution is this Driver that simulates Apache redirects.
 
-Se sei uno sviluppatore PrestaShop e Laravel/Symfony e utilizzi l'ambiente di sviluppo di Herd Laravel, saprai che non avendo Apache a disposizione le direttive dei file .htaccess vengono spesso ignorate da NGINX la soluzione è questo Driver che simula i redirect di Apache
-
-### Passaggi di Installazione:
-
-1. **Scarica il file `PrestaShopValetDriver.php`**
-2. **Accedi alla cartella dei Driver:**
-    - Vai alla directory `~/Library/Application Support/Herd/config/valet/Drivers`.
-    - Puoi farlo velocemente usando il terminale con:
-``` bash
-     cd ~/Library/Application\ Support/Herd/config/valet/Drivers
+### Installation Steps:
+1. **Download the `PrestaShopValetDriver.php` file**
+2. **Access the Drivers folder:**
+    - Go to the directory `~/Library/Application Support/Herd/config/valet/Drivers`.
+   - If it doesn't exist, create it
+    - You can do this quickly using the terminal with:
+```bash
+cd ~/Library/Application\ Support/Herd/config/valet/Drivers
 ```
-1. **Copia il file `PrestaShopValetDriver.php`:**
-    - Sposta o copia il file all'interno di questa directory.
-    - Se non esiste creala
-
-2. **Riavvia il servizio Herd o il tuo ambiente Valet:**
-    - Per assicurarti che il nuovo driver venga riconosciuto, riavvia Herd o il servizio Valet utilizzando il comando:
-``` bash
-     valet restart
+3. **Copy the `PrestaShopValetDriver.php` file:**
+    - Move or copy the file into this directory.
+4. **Restart the Herd service or your Valet environment:**
+    - To ensure the new driver is recognized, restart Herd or the Valet service using the command:
+```bash
+valet restart
 ```
-### Scopo del Driver:
-Il driver è progettato specificamente per identificare e servire progetti PrestaShop mentre utilizzi Laravel Valet. Determina automaticamente se una directory è un progetto PrestaShop e gestisce correttamente le richieste statiche (come immagini o altri file statici) e dinamiche.
-Dopo che il driver sarà stato installato e configurato correttamente, Herd Laravel sarà in grado di eseguire un sito PrestaShop con supporto nativo.
+
+### Purpose of the Driver:
+The driver is specifically designed to identify and serve PrestaShop projects while using Laravel Valet. It automatically determines if a directory is a PrestaShop project and properly handles static requests (such as images or other static files) and dynamic requests.
+After the driver has been installed and configured correctly, Herd Laravel will be able to run a PrestaShop site with native support.
+## Additional Notes:
+
+#### Compatibility: Works with PrestaShop 1.6.x, 1.7.x and 8.x
+#### Requirements:
+- Herd Laravel installed
+- PHP 7.2 or higher
+- Composer installed globally
