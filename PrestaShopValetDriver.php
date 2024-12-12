@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Custom Valet driver for handling PrestaShop sites.
+ * credits for methods by https://github.com/amerigeau/PrestaShopValetDriver
+ */
+
 namespace Valet\Drivers\Custom;
 
 use Valet\Drivers\LaravelValetDriver;
